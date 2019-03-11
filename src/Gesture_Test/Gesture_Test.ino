@@ -21,8 +21,7 @@ void setup()
 {
   Wire.begin();        // join i2c bus (address optional for master)
   Serial.begin(9600);  // start serial for output
- pinMode(testPin, INPUT);  
- Serial.write("3D Gesture sensor is now running....\r\n");  
+ pinMode(testPin, INPUT);    
 }
 
 
@@ -40,26 +39,26 @@ void loop()
                 {
                  
                     case GI_FLICK_R:
-                      Serial.println("RIGHT");
+                      Serial.println("R");
                         break;
 
                     case GI_FLICK_L:
-                        Serial.println("LEFT");
+                        Serial.println("L");
                         break;
 
                     case GI_FLICK_D:
-                     Serial.println("DOWN");
+                     Serial.println("D");
                         break;
 
                     case GI_FLICK_U:
-                       Serial.println("UP");
+                       Serial.println("U");
                         break;
                     case GI_AIRWHEEL_CW://Clockwise in circles
-                     Serial.println("CW");
+                     Serial.println("C");
                         break;
 
                     case GI_AIRWHEEL_CCW://Counterclockwise circles
-                       Serial.println("CCW");
+                       Serial.println("W");
                         break;
 
                     default: break;
@@ -67,6 +66,10 @@ void loop()
             }
   }
   
- else  {};
+ else  
+ {
+  Serial.println("0");
+
+  };
 
 }
