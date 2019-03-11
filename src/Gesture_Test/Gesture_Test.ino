@@ -53,11 +53,11 @@ void loop()
                     case GI_FLICK_U:
                        Serial.println("U");
                         break;
-                    case GI_AIRWHEEL_CW://Clockwise in circles
+                    case GI_AIRWHEEL_CW: //Clockwise in circles
                      Serial.println("C");
                         break;
 
-                    case GI_AIRWHEEL_CCW://Counterclockwise circles
+                    case GI_AIRWHEEL_CCW: //Counterclockwise circles
                        Serial.println("W");
                         break;
 
